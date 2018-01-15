@@ -97,4 +97,7 @@ img.do-not{
 
 .shadowed{
 	box-shadow:0 20px 20px rgba(0,0,0,.08);
+	border:1px solid #eee;
+	display:inline-block;
+	vertical-align:top;
 }
