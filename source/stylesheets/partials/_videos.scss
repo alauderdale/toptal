@@ -1,0 +1,19 @@
+#video-container{
+	margin:0 auto;
+	margin-top:$baseline*2;
+	background:url(../images/phone_bg.png) center top no-repeat; 
+  background-size:100%;
+  padding-bottom:30%;
+	video{
+		width:100%;
+		padding:12%;
+		position: relative;
+    top: 70px;
+          @include breakpoint(lg) {
+        top: 60px;
+      }
+      @include breakpoint(sm) {
+        top: 50px;
+      }
+	}
+}

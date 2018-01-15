@@ -1,0 +1,48 @@
+//sections
+section{
+  padding:$baseline*2 0;
+
+  &.white-bg{
+    background:#fff;
+    border-bottom:1px solid $medium-gray-color;
+    border-top:1px solid $medium-gray-color;
+  }
+  &.primary-bg{
+    background-color:$primary-color;
+  }
+  &.inverse-section{
+  	@extend %white_text;
+    p{
+      color:rgba(255,255,255,.8)!important;
+    }
+    background-color:$primary-color;
+    a{
+      color:white;
+      border-color:white;
+    }
+  }
+  &.blast-off{
+    background:white url(../images/blast_off_bg.png) repeat-x center -100px;
+  }
+  &.ideas{
+    background:white url(../images/ideas-bg.png) center -100px;
+  }
+
+  //home
+  &.home-header-section{
+    background-color:$primary-color;
+    padding:$baseline*2 0 $baseline*8 0;
+    @include background-size(cover);
+    @include breakpoint(sm) {
+      padding-top:0;
+      padding-bottom:$baseline*5;
+    }
+  }
+}
+
+.parallax{
+  @extend %white_text;
+  min-height: 500px;
+  background: transparent;
+}
+

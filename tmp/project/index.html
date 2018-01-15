@@ -1,0 +1,1025 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <meta content='Description' name='description'>
+    <title>
+      NASA App Design
+    </title>
+    <link href="../stylesheets/style.css" rel="stylesheet" />
+    <link href='/images/favicon.ico' rel='shortcut icon'>
+    <script src="../javascripts/lib/jquery.js"></script><script src="../javascripts/lib/bootstrap.js"></script><script src="../javascripts/lib/jquery.viewportchecker.js"></script><script src="../javascripts/lib/parallax.js"></script><script src="../javascripts/lib/pace.js"></script><script src="../javascripts/scripts.js"></script>
+    <body class='project project_index'>
+      
+      <!-- end menu -->
+      <div class='main'>
+        <div id='loader-wrapper'>
+          <div id='loader'></div>
+          <div class='loader-section section-left'></div>
+          <div class='loader-section section-right'></div>
+        </div>
+        <div id='top'></div>
+        <div class='carousel slide carousel-fade' data-interval='2000' data-pause='none' data-ride='carousel' id='history-slider'>
+          <div class='carousel-inner' role='listbox'>
+            <div class='item active'>
+              <img class='fill' src='images/hand_1.png'>
+            </div>
+            <div class='item'>
+              <img class='fill' src='images/hand_2.png'>
+            </div>
+            <div class='item'>
+              <img class='fill' src='images/hend_3.png'>
+            </div>
+          </div>
+        </div>
+        <!-- %section.parallax{"data-parallax"=>"scroll", "data-image-src"=>"http://lorempixel.com/1440/638/sports/2"} -->
+        <section>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center'>
+                  A Timely Challenge
+                </h2>
+                <p>
+                  It’s not every day we come across an application so cutting edge, so sophisticated, that just the thought of it triggers a flood of intrigue. When my team was asked to design an interface for NASA’s new time travel app, this is exactly what happened.
+                </p>
+                <div class='padded text-center double-margin-top double-margin-bottom'>
+                  <img class='img-responsive margin-auto' src='images/logo_1.png'>
+                </div>
+                <h4>
+                  <strong>
+                    The challenge:
+                  </strong>
+                  “Demonstrate how you can apply a common visual language for a NASA time travel app, which consists of a UI that identifies where in time you are, where in time you want to go, and an actionable affordance to initiate time travel”
+                </h4>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+          </div>
+        </section>
+        <section class='inverse-section' style='background-color:#727272;'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center'>
+                  Pre-boarding
+                </h2>
+                <p>
+                  Before diving into a solution, we sketched out some ideas. To develop a meaningful product, we needed to answer a number of questions. Some of the larger questions were:
+                </p>
+                <ol class='baseol'>
+                  <li>
+                    How could a time travel app actually work?
+                  </li>
+                  <li>
+                    What kind of problems might arise with an app that allows people to travel through time? Is this safe?
+                  </li>
+                  <li>
+                    How would people want to move through time?
+                  </li>
+                  <li>
+                    Is location important?
+                  </li>
+                  <li>
+                    What happens if the phone dies?
+                  </li>
+                </ol>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom' src='images/sketch_1.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <p>
+                  To start, we explored some ideas of moving through time. We landed on a “time map” concept. A map which would allow users to scroll through a detailed map of time. We set a range of about 5 billion years past to 5 billion years future - the putative lifespan of the earth. The map could develop over time, just like a map of the earth. As certain points became more fleshed out and explored, more information would become available. With the map, users could also “drop pins” in time, and have a clear understanding of exactly how far away they were traveling.
+                </p>
+                <p>
+                  We were set on the idea of plugging in a location and seeing a visual indicator of where in time the user was going. A point-A-to-point-B feeling. As we continued to explore, we found this to be less important than originally thought.
+                </p>
+                <p>
+                  We also developed an “extended calendar” approach where users could move through time much like they move through a calendar. After all, a calendar is a great way to track time. Ultimately though, the time map appeared to be a stronger concept, as it would allow users to zoom in and out more easily. Additionally, we were concerned that the repetition of a calendar-like interface might make the app feel boring.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom' src='images/sketch_2.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <p>
+                  Additional exploration yielded more problems. To combat the obvious issues of altering time, we developed an idea that made use of the
+                  <a href='https://en.wikipedia.org/wiki/Multiverse' target='_blank'>
+                    multiverse theory.
+                  </a>
+                  Users would be transported to one of the infinite number of parallel universes identical to ours. In this fashion, they could travel to an alternate universe, explore a moment in time, and return home to their “origin universe” - all without the risk of returning to an entirely different future. No “Back-to-the-Future” scenarios here! Let's be honest, no one likes to see themselves slowly fade out of family portraits...
+                </p>
+                <p>
+                  This idea held up, until we started thinking about the repercussions of filling  other universes with time travel tourists. We're one unruly teenager away from chronological chaos!
+                </p>
+                <p>
+                  As we pressed on, we asked ourselves:
+                </p>
+                <ol class='baseol'>
+                  <li>
+                    Why use this app?
+                  </li>
+                </ol>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom' src='images/sketch_3.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <p>
+                  With the answer to this question came our solution. Any NASA based time travel app should be rooted in exploration. We want to harness the spirit of exploring moments in time, not manipulate time. With this mantra in hand, we developed a new concept:
+                </p>
+                <blockquote>
+                  The app will beam users to a
+                  <strong>
+                    simulation
+                  </strong>
+                  of any moment in time. People can safely experience time, without affecting it.
+                </blockquote>
+                <p>
+                  Our solution will allow users to explore the greatness of the past and future through virtual reality.
+                </p>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom' src='images/sketch_4.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <p>
+                  From here, we explored the interface and developed the idea of “moments”. A moment is a location + a time. Through the app, moments could be searched, curated, categorized and most importantly, EXPLORED. Something like “the Air BnB of time” with direct access to any location.
+                </p>
+                <p>
+                  The app will allow people to simulate any moment in time with a simple search. The simulation is 100% realistic and folks can stay as long as they want. Also, the “beam transportation device” keeps user’s phones charged, so no need to worry about getting stuck.
+                </p>
+                <p>
+                  The app remains active while “in flight”. Users can easily search for a new moment to travel to, or return home at any time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center'>
+                  Let the simulation begin
+                </h2>
+                <p>
+                  With a clear understanding of how the app will work, we needed NASA to provide a little more info. We asked them a few questions so we could best solve their problem. Here’s what we got back:
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-1'></div>
+              <div class='col-md-12 col-lg-10'>
+                <div class='brand-doc'>
+                  <div class='col-md-1'></div>
+                  <div class='col-md-10'>
+                    <img class='img-responsive pull-right margin-top' src='images/logo_2.png'>
+                    <div class='clearfix'></div>
+                    <div class='padding-top'>
+                      <div class='padding-top'>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            How does the app work?
+                          </h5>
+                          <hr>
+                          <p>
+                            NASA has had the means to travel through time for quite a while now. We have been documenting, in detail, every earthly moment roughly 5 billion years in the past to 5 billion years in the future (between the formation of the earth and the destruction of the sun).
+                          </p>
+                          <p>
+                            Exploration has always been core to NASA’s mission. In turn, we would like to allow the public to explore these moments just as we have. To do so, we have developed technology that simulates traveling to a point in time through a satellite based “beaming mechanism”. Our app will allow people to beam to a simulation of any moment they please. The app is totally safe and totally free!
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            Competition:
+                            <br>
+                            Who are your competitors in this space (urls)?
+                          </h5>
+                          <hr>
+                          <p>
+                            <a href='http://backtothefuture.wikia.com/wiki/Flux_capacitor' target='_blank'>
+                              http://backtothefuture.wikia.com/wiki/Flux_capacitor
+                              <i class='fa fa-external-link'></i>
+                            </a>
+                          </p>
+                          <p>
+                            <a href='https://en.wikipedia.org/wiki/TARDIS' target='_blank'>
+                              https://en.wikipedia.org/wiki/TARDIS
+                              <i class='fa fa-external-link'></i>
+                            </a>
+                          </p>
+                          <p>
+                            <a href='https://dribbble.com/shots/1524674-Timepass-A-Time-Travel-Concept' target='_blank'>
+                              https://dribbble.com/shots/1524674-Timepass-A-Time-Travel-Concept
+                              <i class='fa fa-external-link'></i>
+                            </a>
+                          </p>
+                          <p>
+                            <a href='https://dribbble.com/shots/1622138-Time-Travel-App/attachments/252424' target='_blank'>
+                              https://dribbble.com/shots/1622138-Time-Travel-App/attachments/252424
+                              <i class='fa fa-external-link'></i>
+                            </a>
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            What is your target market?
+                            <br>
+                            List of audiences/targets/ current and future
+                          </h5>
+                          <hr>
+                          <p>
+                            Ultimately, we want the app to be useful to everyone. To start, we plan to target adults over the age of 18. We want to orient the app toward people with an explorer’s spirit. Think outdoor enthusiasts and college students. People who enjoy new experiences.
+                          </p>
+                          <p>
+                            We expect our initial audience to be intelligent, tech savvy people. We want to target good natured people that will use the gift of time-travel to explore, rather than use it for personal gain. Anyone caught using the app for anything other than exploration will be banned.
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            Describe your best customers’/users’ relationship with the app
+                          </h5>
+                          <hr>
+                          <p>
+                            We want the app to feel friendly. A lot of other time travel apps look “futuristic” and cold. We want to create an experience that mimics “searching for a picture” or “entering a location into a GPS”. The app should feel familiar right out of the gate. We want to avoid it looking too “sci-fi”.
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            Who is your user?
+                          </h5>
+                          <hr>
+                          <p>
+                            Anyone who wants to explore time and is old enough to appreciate it. We understand that some moments may be more explicit than others. We have discussed a “parental control” or “rating” feature to limit access to certain moments. We have also made some moments “unsearchable” due to their graphic nature. Access to these moments is granted by special request only.
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            Current value proposition: What are you “selling”?
+                          </h5>
+                          <hr>
+                          <p>
+                            We are selling a safe time-exploration experience.
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            Describe your current offering
+                          </h5>
+                          <hr>
+                          <p>
+                            Currently, we offer users the ability to simulate any point in time they wish, within the lifespan of the earth.
+                          </p>
+                          <p>
+                            To start, NASA will feed a range of interesting moments into the system, broken down into categories for the user to explore. Users can also search for any moment they wish.
+                          </p>
+                          <p>
+                            A moment consists of a:
+                            <ul>
+                              <li>
+                                time
+                              </li>
+                              <li>
+                                date
+                              </li>
+                              <li>
+                                location (exact address or general place)
+                              </li>
+                            </ul>
+                          </p>
+                          <p>
+                            The simulation is 100% realistic. Users will feel exactly as if they are there. The experience can be described as “ghost like”, where users can see and hear their surroundings, but the surroundings do not see them.
+                          </p>
+                          <p>
+                            While “in simulation” users can continue to use the app to see their current moment in time, search for their next location or return home.
+                          </p>
+                          <p>
+                            This is an MVP, and we plan to quickly allow travel deeper into the past and future.
+                          </p>
+                          <p>
+                            We want the interface to be extendable enough to allow for upcoming features like:
+                          </p>
+                          <ul>
+                            <li>
+                              commenting on a moment
+                            </li>
+                            <li>
+                              dropping pins to return to later
+                            </li>
+                            <li>
+                              user generated moment feeds.
+                            </li>
+                          </ul>
+                          <p>
+                            We see social interaction as a large component for v2 of the app.
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            If you could get your users/visitors to do only one thing, what would it be?
+                          </h5>
+                          <hr>
+                          <p>
+                            Experience a meaningful moment in time.
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            Apps and features:
+                            <br>
+                            What apps have the look and feel that are relevant to what you want to achieve (do not need to be in your space):
+                          </h5>
+                          <hr>
+                          <p>
+                            Google maps
+                            <br>
+                            UBER
+                            <br>
+                            Apple maps
+                            <br>
+                            Hotels Tonight
+                            <br>
+                            Air BnB
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            Personification:
+                            <br>
+                            If your app were a person, alive or dead, real or fictitious, who would it be? And why?
+                          </h5>
+                          <hr>
+                          <p>
+                            Mister Peabody
+                            <br>
+                            <a href='https://en.wikipedia.org/wiki/Mister_Peabody'>
+                              https://en.wikipedia.org/wiki/Mister_Peabody
+                            </a>
+                          </p>
+                          <p>
+                            He was a friendly and knowledgeable guide through the depths of time. Ultimately, we want the app to act as both a guide and a vessel. Time travel can be daunting. We want our users to feel comfortable, safe and informed.
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            Brand pyramid:
+                            <br>
+                            (3 to 5 answers per category please)
+                          </h5>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            Personality: (e.g. dedicated, modern, sleek):
+                          </h5>
+                          <hr>
+                          <p>
+                            Friendly
+                            <br>
+                            Approachable
+                            <br>
+                            Empathetic
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            Functional Benefits: (e.g. information, guidance, analysis):
+                          </h5>
+                          <hr>
+                          <p>
+                            Information
+                            <br>
+                            Guidance
+                            <br>
+                            Transport
+                          </p>
+                        </div>
+                        <div class='double-margin-bottom'>
+                          <h5>
+                            Features/attributes: (e.g. facts, user generated, web based)
+                          </h5>
+                          <hr>
+                          <p>
+                            Mobile app
+                            <br>
+                            Signal based
+                            <br>
+                            Free
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='col-md-1'></div>
+                </div>
+              </div>
+              <div class='col-lg-1'></div>
+            </div>
+          </div>
+        </section>
+        <section style='background-color:white;'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center'>
+                  Preparing for takeoff
+                </h2>
+                <p>
+                  While researching other time travel interfaces, we came across some great thinking. We noticed however, a lot of the designs were “futuristic” looking. Per NASA’s request to keep the app friendly, an approachable solution was always in the back of our minds.
+                </p>
+                <p>
+                  We remember hearing that many “sci-fi” interfaces in movies and shows were intentionally designed to look “complex” and “involved”. These were two feelings we wanted to avoid.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom double-margin-top' src='images/landscape.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h4>
+                  We also felt that
+                  <strong>
+                    entering the destination
+                  </strong>
+                  was something we could make easy and intuitive.
+                </h4>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center'>
+                  Starting the engines
+                </h2>
+                <p>
+                  Armed with all the information needed to start working on the app, we began mapping out the functionality.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom margin-top' src='images/wire_1.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h4>
+                  The home screen features a list of categories to explore and a search bar to... well… search. Initially, categories will be stocked by NASA. Eventually, these will be user generated.
+                </h4>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <img class='img-responsive margin-auto margin-bottom margin-top' src='images/wire_2.png'>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h4 class='double-margin-bottom'>
+                  Instead of a daunting multi-step time picker flow, we envisioned a new search syntax. Using one input field, users can simply search for a moment in time.
+                </h4>
+                <h5 class='text-center'>
+                  <i class='fa fa-search'></i>
+                  “1234 1st st Boulder, CO Jan 1, 1988 AD 2:30pm"
+                </h5>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <img class='img-responsive margin-auto margin-bottom margin-top' src='images/wire_3.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h4 class='double-margin-bottom'>
+                  Through some prototyping, we found the search UX to be a solution that users quickly warmed up to. If for some reason they get stuck, we will provide plenty of examples and coaching.
+                </h4>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <img class='img-responsive margin-auto margin-bottom margin-top' src='images/wire_4.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h4 class='double-margin-bottom'>
+                  Through searching and browsing, users find moments. The app will launch with two types of moments:
+                </h4>
+                <ol class='baseol darkol'>
+                  <li>
+                    <strong>
+                      Specific moments
+                    </strong>
+                    linking to specific events in time
+                  </li>
+                  <li>
+                    <strong>
+                      General moments
+                    </strong>
+                    generated from searching any location + time.
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <img class='img-responsive margin-auto margin-bottom margin-top' src='images/wire_5.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h4 class='double-margin-bottom half-margin-bottom'>
+                  Tapping the warp button on a moment will simultaneously transport users to the simulation and switch to a screen displaying the current moment-in-time. From there, users can easily tap the "Take Me Home" button, ending the simulation.
+                </h4>
+                <h4>
+                  The "current moment screen" can be collapsed for continued moment browsing. The “take me home” button will then remain fixed to the bottom of the screen as long as the user is “in-flight”.
+                </h4>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style='background-color:white;'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <img class='img-responsive margin-auto' src='images/loader.gif' style='opacity:.1;' width='300px'>
+                <h2 class='text-center' style='margin-top:-187px;'>
+                  Blast off!
+                </h2>
+                <p>
+                  With the functionality solidified, the design started to come together. We used
+                  <a href='http://sservi.nasa.gov/wp-content/uploads/2011/10/NASA_Style_Guide_v2.1.pdf' target='_blank'>
+                    NASA’s Brand Guidelines
+                  </a>
+                  as a base for the look-and-feel. In the initial round of questioning, NASA pointed us toward a friendly look, designed to be approachable for all types of people. To accomplish this, we kept the design light and developed a layout grounded in scanability.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+          </div>
+        </section>
+        <section class='blast-off'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-3'></div>
+              <div class='col-md-6'>
+                <div class='app-bg'>
+                  <div class='carousel slide' id='carousel-app'>
+                    <div class='carousel-inner'>
+                      <div class='item active'>
+                        <img alt='...' class='full-width' src='images/app/app_1.png'>
+                      </div>
+                      <div class='item'>
+                        <img alt='...' class='full-width' src='images/app/app_2.png'>
+                      </div>
+                      <div class='item'>
+                        <img alt='...' class='full-width' src='images/app/app_3.png'>
+                      </div>
+                      <div class='item'>
+                        <img alt='...' class='full-width' src='images/app/app_4.png'>
+                      </div>
+                      <div class='item'>
+                        <img alt='...' class='full-width' src='images/app/app_5.png'>
+                      </div>
+                      <div class='item'>
+                        <img alt='...' class='full-width' src='images/app/app_6.png'>
+                      </div>
+                    </div>
+                    <a class='left carousel-control' data-slide='prev' href='#carousel-app'></a>
+                    <a class='right carousel-control' data-slide='next' href='#carousel-app'></a>
+                  </div>
+                </div>
+              </div>
+              <div class='col-md-3'></div>
+            </div>
+            <div class='row'>
+              <div class='col-md-12'>
+                <h4 class='text-center'>
+                  Click the screen to advance images.
+                </h4>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center'>
+                  Decisions, decisions
+                </h2>
+                <p>
+                  While the app is not a Google product, we chose to adopt some of
+                  <a href='https://www.google.com/design/spec/material-design/introduction.html' target='_blank'>
+                    Google’s material design patterns.
+                  </a>
+                  The language translates well across both IOS and Android, assuming attention to detail is paid to each platform’s native design foundation.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom margin-top' src='images/decision_1.png'>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center'>
+                  Type
+                </h2>
+                <p>
+                  NASA uses helvetica as their primary typeface. It’s designed to work well in any situation, and is very close to Apple’s system typeface: San Francisco, which was modeled closely from helvetica. We decided to use helvetica as the typeface for both platforms. It is neutral enough to make both IOS and Android demographics feel at home. We set the text on the larger side, so all users, young and old, are able read the information on the pages (without having to resort to their reading glasses). While smaller text looks nice, accessibility is something NASA deemed important.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom margin-top' src='images/type_1.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <p>
+                  A staple of the NASA brand is the “vertical type” treatment. To keep the app design feeling like NASA, even with the
+                  <a href='https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Branding.html' target='_blank'>
+                    absence of logos and heavy branding
+                  </a>
+                  , we added vertical type to the category cells. We choose to display the “moment count” here, as we have relative control over the length of the label. This is the first screen users will see, so  it was a great opportunity to project the essence of NASA right out of the gate.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom double-margin-top' src='images/type_2.png'>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='inverse-section' style='background-color:#222225;'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center'>
+                  Color
+                </h2>
+                <p>
+                  In addition to typography, we aimed to surface the brand through color. We researched the color guidelines and began assigning meaning to color use:
+                </p>
+                <ol class='baseol'>
+                  <li style='color:#F1373C!important;'>
+                    <strong>
+                      Red:
+                    </strong>
+                    actions
+                  </li>
+                  <li style='color:#0064B6!important;'>
+                    <strong>
+                      Blue:
+                    </strong>
+                    accents
+                  </li>
+                  <li style='color:#A8A9AD!important;'>
+                    <strong>
+                      Gray/Black:
+                    </strong>
+                    text
+                  </li>
+                </ol>
+                <p>
+                  With our color system in place, we applied it to the designs. We added some subtle stars, influenced by the NASA logo. Whether or not the star treatment will be a success remains to be seen.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom double-margin-top' src='images/color_1.png'>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='inverse-section primary-bg'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center no-marign-bottom'>
+                  Find your moment
+                </h2>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto double-margin-bottom' src='images/find_1.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <p>
+                  Per our outlines in the discovery phase, we designed the search functionality to be quick and easy. Early on, we explored surfacing categories here. After some testing however, we removed the categories in favor of coach marks for the search field. In future iterations of the app, we expect to extend the search functionality to include things like user generated categories and additional moments in time. Because we moved away from fixed date input fields, the search bar can evolve as the app does.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom margin-top' src='images/find_2.png'>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='parallax' data-image-src='images/moments_bg.png' data-parallax='scroll'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center'>
+                  Moments
+                </h2>
+                <p>
+                  Moments are core to the app concept. Making them look interesting in a listview turned out to be somewhat of a challenge. To get them looking just right, we went through a few rounds of color treatments. While we made progress, we feel we're not there yet.
+                </p>
+                <p>
+                  Like locations in a map app, more fleshed out moments will surface supporting images. Newer or less explored moments will fall back to a default coordinate treatment, displaying a visualization of where the moment sits in time. To start, only moments curated by NASA will have images and descriptions. Eventually, we will add the ability for anyone to add to moments.
+                </p>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom double-margin-top' src='images/moments_1.png'>
+              </div>
+            </div>
+            <div class='double-padding-bottom'></div>
+            <div class='double-padding-bottom'></div>
+          </div>
+        </section>
+        <section>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom' src='images/moments_2.png' style='margin-top:-200px;'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h4>
+                  Apple encourages transparency in design and Android employs a card-based metaphor. We designed moment thumbnails according to these suggested treatments for each platform.
+                </h4>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom double-margin-top' src='images/moments_3.png' style='margin-top:-200px;'>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='inverse-section primary-bg'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center no-marign-bottom'>
+                  <span class='hidden-xs'>
+                    Do not
+                  </span>
+                  press the big red button!
+                </h2>
+                <img class='do-not hidden-xs' src='images/do_not_1.png' style=''>
+                <p>
+                  Building on  our NASA-red action color, we choose to incorporate a large red button to initiate warping. Many of us have an innate child-like desire to “push a big red button”. We decided to play off this emotion to add some delight to the app. In future iterations, we feel we can add some exciting UX to really drive home a feeling of joy here. Perhaps a pleasurable sound or a long press build up that would also act as a “confirm”.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='double-padding-bottom'></div>
+            <div class='double-padding-bottom'></div>
+            <div class='double-padding-bottom'></div>
+          </div>
+        </section>
+        <section style='background-color:white;'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom' src='images/do_not_2.png' style='margin-top:-255px;'>
+                <img class='img-responsive margin-auto margin-bottom margin-top' src='images/do_not_3.png'>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style='background-color:white;'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center'>
+                  A quick note on the iPhone menu
+                </h2>
+                <p>
+                  Apple prefers their apps use a fixed bottom nav bar to navigate. We explored this idea, but ultimately went with a slide-in menu. We did this to support the accessibility of the “Take Me Home” action. While we would have preferred to use the tab bar, we didn't want the two to compete. Perhaps in the future, we can find a more viable solution.
+                </p>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom double-margin-top' src='images/menu.gif' style='box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.30);' width='320px'>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center no-marign-bottom'>
+                  Putting it all together
+                </h2>
+                <p>
+                  With our initial design decisions in place, we linked the screens together into a complete flow. It was helpful for us to visualize the experience from start to finish.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-md-3'></div>
+              <div class='col-md-6'>
+                <div id='video-container'>
+                  <video controls=''>
+                    <source src='images/flow-SD.mp4' type='video/mp4'>
+                  </video>
+                </div>
+              </div>
+              <div class='col-md-3'></div>
+            </div>
+          </div>
+        </section>
+        <section style='background-color:white;'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center no-marign-bottom'>
+                  Preventing crash landings
+                </h2>
+                <p>
+                  The designs act as a solid base to begin testing assumptions. That said, the result is just that: A starting point.
+                </p>
+                <blockquote>
+                  We still have a long way to go to nail the experience.
+                </blockquote>
+                <p>
+                  During the next phase, we plan to be receptive to feedback and open to evolving our thinking, based on what we observe when people pick up this new product for the first time.
+                </p>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img class='img-responsive margin-auto margin-bottom double-margin-top' src='images/crash_1.png'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h4>
+                  Screens identifying where in time you are, where in time you want to go, and an actionable affordance to initiate time travel. Android tablet left, iPhone right.
+                </h4>
+              </div>
+              <div class='col-md-1 col-lg-2'></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center no-marign-bottom'>
+                  Traveling to the future
+                </h2>
+                <p>
+                  In a perfect world, we would simply use our new app to travel to the future and see what features stick. Somehow though, that feels like cheating. Moving forward, we plan to explore additional functionality including:
+                </p>
+                <ol class='baseol darkol'>
+                  <li>
+                    Allowing users to save moments
+                  </li>
+                  <li>
+                    Allowing users to comment on moments
+                  </li>
+                  <li>
+                    Allowing users to share moments
+                  </li>
+                  <li>
+                    Extending the search bar functionality to allow users to search for general interests that could link to a list of moments
+                  </li>
+                  <li>
+                    User-created moment feeds, potentially rooted in hashtags.
+                  </li>
+                  <li>
+                    Trending moments
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='primary-bg inverse-section'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-1 col-lg-2'></div>
+              <div class='col-md-10 col-lg-8'>
+                <h2 class='text-center no-margin-bottom'>
+                  Thats all folks.
+                </h2>
+                <h4 class='text-center'>
+                  -Thanks,
+                  <a href='#top' style='text-decoration:underline;'>
+                    beam me up Scotty
+                  </a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- end main content -->
+      <link href='http://vjs.zencdn.net/5.4.6/video-js.css' rel='stylesheet'>
+        <!-- If you'd like to support IE8 -->
+      </link>
+      <script src='http://vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js'></script>
+      <script src='http://vjs.zencdn.net/5.4.6/video.js'></script>
+    </body>
+  </head>
+</html>

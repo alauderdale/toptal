@@ -1,0 +1,65 @@
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+.fill{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+
+.app-bg{
+  background:url(../images/phone_bg.png) center no-repeat; 
+  background-size:70%;
+  #carousel-app{
+      padding:24%;
+    .carousel-control{
+      background:none;
+      width:50%;
+      &.left{
+            cursor: url(../images/gallery-arrow-prev.png) 15 9,e-resize ;
+      }
+      &.right{
+            cursor: url(../images/gallery-arrow-next.png) 15 9,e-resize ;
+      }
+      &:hover{
+        background:none;
+      }
+    }
+  }
+}
+

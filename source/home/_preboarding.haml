@@ -1,0 +1,95 @@
+%section.inverse-section{:style=>"background-color:#727272;"}
+	.container
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%h2.text-center
+					Shopping around
+				%p
+					While immediately diving into the pixels is always tempting, especially on  a project like this, we had some ground work to do. To begin, we needed to answer a few questions. Some of the larger questions were:
+				%ol.baseol
+					%li
+						What is the scope of this project?
+					%li
+						Should this application control heat, music AND lights? Or perhaps just a subset of the three?
+					%li
+						What parts of a smart-device app deliver the most friction? 
+					%li
+						Where can we innovate? 
+			.col-md-1.col-lg-2
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%p
+					After thinking through the initial scope of the project, we decided to focus on a 
+					%strong
+						smart thermostat
+					and keep the functionality scoped to controlling the temperature in one’s home. This allowed us to get more granular with our solution and focus in on a single facet of smart technology.
+				%p
+					To start, we began sketching out some ideas, working not to get boxed-in by and existing product offerings. It seemed that one of the biggest points of friction in thermostat control is getting the schedule dialed in. We set our sights on designing a system that required little to no setup. 
+			.col-md-1.col-lg-2
+		.row
+			.col-lg-12
+				%img.img-responsive.margin-auto.margin-bottom{:src=>"images/sketch_1.png"}
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%p
+					Our initial concepts included an apple watch component, which would measure your body temperature and automatically regulate your home’s temperature in whichever zone you were in. Ultimately though, this proved to be too complex and led to more questions like:
+				%ol.baseol
+					%li
+						What if there’s more that one person in the house?
+					%li
+						How would the zones anticipate your arrival and know to “Warm up” or “Cool down”?
+					%li
+						Why would someone want to wear this all the time? 
+
+					%li
+						What if they need to take it off?
+			.col-md-1.col-lg-2
+		.row
+			.col-lg-12
+				%img.img-responsive.margin-auto.margin-bottom{:src=>"images/sketch_2.png"}
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%p
+					To refine the idea, we thought about keeping the “Wearable” concept, but limiting the amount of time someone would need to wear it. We thought about a technology where the user would only need to wear the device for a couple weeks while the system collected habits and then could maintain itself. 
+			.col-md-1.col-lg-2
+		.row
+			.col-lg-12
+				%img.img-responsive.margin-auto.margin-bottom{:src=>"images/sketch_3.png"}
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%p
+					With more deep thinking, we realized that a wearable was just too cumbersome. Also, monitoring body temperature is the only thing a wearable would be beneficial for, and with that feature off the table, we can simply use the user’s device and wall unit to collect data and intelligently set up a schedule.
+				%p
+					We had reached a few conclusions:
+				%ol.baseol
+					%li
+						Onboarding should be easy
+					%li
+						To achieve this, Machine learning should be core to the app’s functionality
+					%li
+						The app should have a “human” touch, with a delightful user experience at it’’s core
+				%p
+					As we thought deeper, an emerging trend came to mind; “Assistant” and “Chat bot” interfaces. With impressive machine learning improvements over the last decade, we can now deliver “human like” interactions by way of an artificial chat interface. This eliminates the need for a complicated setup flow and heavy UI elements,  as users can simply “chat” with the app to get things done. 
+				%p
+					With that came our solution:
+
+
+				%blockquote
+					The app will allow users to interact directly with their smart thermostat by means of a 
+					%strong
+						chat interface 
+					with a human-like personality. The app will respond to commands and notify by way of a simple messaging channel. 
+			.row
+				.col-lg-12
+					%img.img-responsive.margin-auto.margin-bottom{:src=>"images/sketch_4.png"}
+			.row
+				.col-md-1.col-lg-2
+				.col-md-10.col-lg-8
+					%p
+						Armed with a direction, we were ready to begin implementing the concept. 
+				.col-md-1.col-lg-2

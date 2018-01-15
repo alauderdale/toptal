@@ -1,0 +1,139 @@
+%section
+	.container	
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%h2.text-center
+					Starting the fire
+				%p
+					Prepared with all the information needed to start working on the app, we began mapping out the flow.
+			.col-md-1.col-lg-2
+		.row
+			.col-lg-12
+				%img.img-responsive.margin-auto.margin-bottom.margin-top{:src=>"images/flow.png"}
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%h4
+					The flow assumes that the hardware is already installed and functional. We decided to focus on the high-level onboarding flow and the broad sections of the app being the chat, schedule and settings. 
+				%h4
+					One thing we noticed quickly was that most of the on-boarding could take place through an initial chat conversation. The conversation should map to any settings that require more information to be configured correctly. 
+%section
+	.container
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%h2.text-center
+					Wire it up
+				%p
+					With a logical (high level) flow in place, we began putting together some wireframes for each of the screens needed to articulate the functionality of the product. 
+			.col-md-1.col-lg-2
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%img.img-responsive.margin-auto.margin-bottom.margin-top{:src=>"images/wire_1.png"}
+			.col-md-1.col-lg-2
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%img.img-responsive.margin-auto.double-margin-bottom.margin-top{:src=>"images/wire_2.png"}
+			.col-md-1.col-lg-2
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%h4.double-margin-bottom
+					Once an account has been created, users must pair their thermostat with the app. We aimed to make this process as simple as possible with a “Pair manually” fallback. 
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%p
+					Once users complete a simple onboarding flow, they are dropped into the main hub of the app, the chat log. We designed the chat page to feel familiar to anyone who has used a chat app before. 
+			.col-md-1.col-lg-2
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%img.img-responsive.margin-auto.margin-bottom.margin-top{:src=>"images/wire_3.png"}
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%p.double-margin-bottom
+					It’s here they will meet their Cozy for the first time and get everything configured. During the initial setup, Cozy is aiming to:
+				%ol.baseol.darkol
+					%li
+						%strong
+							Introduce users
+						to the chat-like functionality through interacting with the UI
+					%li
+						%strong
+							Set your current more
+						hot vs. cold 
+					%li
+						%strong
+							Set your current more
+						hot vs. cold 
+					%li
+						Set your 
+						%strong
+							base 
+						temperature
+					%li
+						Set your 
+						%strong
+							away 
+						temperature
+					%li
+						Inform you that Cozy will create a schedule for you automatically 
+					%li
+						%strong
+							Give you an overview 
+						of some of the commands you can use
+
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%img.img-responsive.margin-auto.margin-bottom.margin-top{:src=>"images/wire_4.png"}
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%h4.double-margin-bottom
+					After interacting with Cozy for the first time, users should have all their settings configured and have a good idea how to communicate with it. 
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%p
+					If desired, users need never leave the chat place, as any setting and scheduling decision can be made by simply chatting with Cozy. That said, we designed a settings place where users can manage all of their configuration options and manually control the thermostat if needed. 
+			.col-md-1.col-lg-2
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%img.img-responsive.margin-auto.margin-bottom.margin-top{:src=>"images/wire_5.png"}
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%p
+					We also designed a scheduling interaction where users can manually create or adjust their heating/cooling schedule either based on Cozy’s suggestions or start from scratch.  
+			.col-md-1.col-lg-2
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%p
+					To adjust their schedule, users can tap into a day of the week and then drag the temperature balls left/right for temp and up/down for time. Tapping the screen will add a new ball and tapping an existing bal will allow users to remove it. Long pressing a ball will bring up the configuration UI (screen 3) 
+			.col-md-1.col-lg-2
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%img.img-responsive.margin-auto.double-margin-bottom.margin-top{:src=>"images/wire_6.png"}
+		.row
+			.col-md-1.col-lg-2
+			.col-md-10.col-lg-8
+				%h4.double-margin-bottom
+					We looked to nest for inspiration here. Though nest has a horizontal orientation. The way Nest handles the interaction is clever as it allows
+					%strong 
+						temperature 
+					adjustment to take place through dragging the ball up and down (more expected) and 
+					%strong
+						time 
+					adjustment with left and right. However, we felt that turning the phone to landscape mode can be a hassle and having temp along the X-axis may prove just as intuitive. 
+				%h4
+					Also, nest forces users to first enter an “Edit” mode for adding and removing balls. We felt this was unnecessary and could be eliminated. Simply tap to create, tap to remove, long-press to edit. 
+

@@ -1,0 +1,100 @@
+////intro
+
+
+.intro{
+	p{
+		font-family: $sans-font-name;
+		line-height:3.7rem;
+		margin-bottom:$baseline/2;
+		font-size: 1.9rem;
+		@include breakpoint(sm) {
+      font-size: 1.6rem;
+      line-height:2.8rem;
+    }
+		&.signature{
+			color:rgba(0,0,0,.5);
+			font-size: 1.5rem;
+			font-family: $light-font-name;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.brand-doc{
+	@extend %white_text;
+	background:#0068A0 url(../images/Confidential.png) no-repeat center 200px;
+	display:inline-block;
+	padding:$baseline $baseline*2;
+  @include breakpoint(sm) {
+    padding:$baseline $baseline;
+  }
+	margin:$baseline*2 0 0 0;
+	box-shadow: 0px 2px 84px 0px rgba(0,0,0,0.27);
+	hr{
+		border-color:rgba(255,255,255,.5);
+	}
+	p,li{
+		font-family:$sans-font-name;
+		font-size: 1.8rem;
+		line-height:2.5rem;
+		color:rgba(255,255,255,.9)!important;
+
+		a{
+			color:white;
+			font-size:1.5rem;
+			/* These are technically the same, but use both */
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+			-ms-word-break: break-all;
+			/* This is the dangerous one in WebKit, as it breaks things wherever */
+			word-break: break-all;
+			/* Instead use this non-standard one: */
+			word-break: break-word;
+
+			/* Adds a hyphen where the word breaks, if supported (No Blink) */
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+			border-bottom-color:white!important;
+		}
+	}
+	h5{
+		font-family:$bold-font-name;
+		font-size: 1.8rem;
+		line-height:2.5rem;
+		color:white;
+		text-transform:none;
+		letter-spacing:0;
+	}
+}
+
+
+img.do-not{
+	    position: relative;
+    top: -238px;
+    right: 20px;
+    margin-bottom: -138px;
+      @include breakpoint(md) {
+        top: -168px;
+        width:200px;
+      }
+}
+
+
+.shadowed{
+	box-shadow:0 20px 20px rgba(0,0,0,.08);
+}
