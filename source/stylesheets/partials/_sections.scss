@@ -31,7 +31,7 @@ section{
 
   //home
   &.home-header-section{
-    background-color:$primary-color;
+    @include linear-gradient(-180deg, #3862A0 0%, #3862A0 100%);
     padding:$baseline*2 0 $baseline*8 0;
     @include background-size(cover);
     @include breakpoint(sm) {
